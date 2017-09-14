@@ -1,23 +1,28 @@
----
-layout: default
----
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cael Krigbaum Portfolio</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<nav class="topNav">
+		<ul>
+			<li>
+				<a href="#">Home</a>
+			</li>
+			<li>
+				<a href="#">Twitch API Project (TAP)</a>
+			</li>
+			<li>
+				<a href="#">Twitch API Project 2 (TAP2)</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="jumbotron">
+		<div class="row text-center">
+			<h1> Cael Krigbaum </h1>
+			<h3> Welcome to my site! It's just a placeholder for now, but check back soon for some exciting updates on the projects I'm working on!</h3>
+		</div>
+	</div>
+</body>
+</html>
