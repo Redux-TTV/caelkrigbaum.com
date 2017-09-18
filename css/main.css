@@ -15,17 +15,26 @@ a {
 	text-decoration: none;
 }
 
+.row {
+  display: inline-flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100vh;
+}
+
 .topNav {
 	display: inline-flex;
 	flex-flow: row nowrap;
 	justify-content: flex-start;
 	align-items: flex-start;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 	width: 100%;
-	max-width: 76rem;
+  height: auto;
 	text-align: left;
-	position: relative;
 	border-style: none;
-	background-color: #d05af4;
+	background-color: #DEDEDE;
 }
 
 .jumboText {
@@ -33,44 +42,82 @@ a {
 	flex-flow: column nowrap;
 	justify-content: center;
   background-color: #F7F7F7;
-  box-sizing: border-box;
   padding: 20px;
   text-align: center;
   width: 100%;
-	height: 200px;
-	max-width: 76rem;
-  position: relative;
-	/*background-image: url("../_content/purple_water.jpeg");*/
+	background-image: url(../_content/architecture.jpeg);
+  background-size: cover;
+}
+
+@media (min-width:60rem) {
+  .jumboText {
+    height: 100vh;
+  }
+}
+
+.jumboText h1, h4 {
+  color: #FFFFFF;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.jumboText h1 {
+  font-size: 6vh;
+}
+
+.jumboText h4 {
+  font-size: 3vh;
 }
 
 .Project1, .Project2 {
 	display: inline-flex;
 	flex-flow: column nowrap;
-	height: 200px;
-	width: 100%;
+	height: 100vh;
+	width: 50%;
 	justify-content: center;
 	align-items: center;
-	background-color: #d05af4;
-	border-style: ridge;
-	border-bottom: 2px;
+	background-color: #DEDEDE;
+}
+
+.Project1 {
+  margin-top: 1;
+  margin-right: 1;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+.Project2 {
+  margin-top: 1;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 1;
+}
+
+.Project1:hover, .Project2:hover {
+  background-color: #c9c9c9;
 }
 
 .navList {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 	margin: 0;
 	padding: 0;
 }
 
-.jumboText h4 {
-	font-family: Helvetica, sans-serif;
-	color: #000000;
-}
 .topNav li {
-	color: #FFFFFF;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  height:inherit;
+	color: #000000;
 	background-color: inherit;
 	font-family: Helvetica, sans-serif;
 	font-size: 1rem;
-	text-transform: uppercase;
-	display: inline-flex;;
+	text-transform: capitalize;
+	display: inline-flex;
 	padding: 5px 10px;
 	/*
 	border-style: solid;
@@ -81,10 +128,25 @@ a {
 
 .navList li a:hover {
 	color: #626a77;
+  /*background-color: #c9c9c9;*/
 }
 
 #navIcon {
 	font-family: fantasy;
 	font-size: 2em;
 	color: #FFFFFF;
+}
+
+#contact {
+	display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+	margin-top: 50px;
+}
+
+#contact h1, h3, p {
+	margin:0;
+	padding:0;
 }
