@@ -1,5 +1,5 @@
 body {
-	font-family: Helvetica, sans-serif;
+	font-family: 'Raleway', sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -45,7 +45,7 @@ a {
   padding: 20px;
   text-align: center;
   width: 100%;
-	background-image: url(../_content/architecture.jpeg);
+	background-image: url(../content/architecture.jpeg);
   background-size: cover;
 }
 
@@ -61,7 +61,7 @@ a {
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-     1px 1px 0 #000;
+    1px 1px 0 #000;
 }
 
 .jumboText h1 {
@@ -114,21 +114,15 @@ a {
   height:inherit;
 	color: #000000;
 	background-color: inherit;
-	font-family: Helvetica, sans-serif;
+	/*font-family: Helvetica, sans-serif;*/
 	font-size: 1rem;
 	text-transform: capitalize;
 	display: inline-flex;
 	padding: 5px 10px;
-	/*
-	border-style: solid;
-	border-width: 2px;
-	border-color: #000000;
-	*/
 }
 
 .navList li a:hover {
 	color: #626a77;
-  /*background-color: #c9c9c9;*/
 }
 
 #navIcon {
