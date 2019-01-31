@@ -97,6 +97,13 @@ a {
   padding: 2rem;
 }
 
+.jumboText a {
+	color: #FFFFFF;
+  font-size: 3vh;
+	padding: 3rem;
+	text-decoration: underline;
+}
+
 .col-50-100 {
 	display: inline-flex;
 	flex-flow: column nowrap;
