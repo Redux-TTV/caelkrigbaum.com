@@ -43,6 +43,7 @@
             });
             for (let index = 0; index < document.getElementsByTagName('a').length; index++) {
                 const element = document.getElementsByTagName('a')[index];
+                console.log(element);
                 element.addEventListener('click',function(e){
                     e.preventDefault();
                     $('#content').load(element.href);
