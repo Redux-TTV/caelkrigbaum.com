@@ -17,24 +17,31 @@
     </div>
     <div class="col-md"></div>
 </div> -->
-<div class="row hidden">
-    <div class="col-md"></div>
-    <div class="col-md-2">
-        <a href="/index.html">Home</a>
+<div class="row">
+    <div id="navItems" class="col-md-11" style="display: none;">
+        <div class="col-md"></div>
+        <div class="col-md-2 text-center">
+            <a href="/index.html">Home</a>
+        </div>
+        <div class="col-md-2 text-center">
+            <a href="/public/pages/blog.html">Blog</a>
+        </div>
+        <div class="col-md-2 text-center">
+            <a href="/public/pages/projects.html">Projects</a>
+        </div>
+        <div class="col-md-2 text-center">
+            <a href="/public/pages/about.html">About</a>
+        </div>
+        <div class="col-md-2 text-center">
+            <a href="/public/pages/contact.html">Contact</a>
+        </div>
+        <div class="col-md"></div>
     </div>
-    <div class="col-md-2 text-center">
-        <a href="/public/pages/blog.html">Blog</a>
+    <div class="col-md-1">
+        <button type="button" class="btn btn-secondary" id="expandNav">
+            <i class="fas fa-bars"></i>
+        </button>
     </div>
-    <div class="col-md-2 text-center">
-        <a href="/public/pages/projects.html">Projects</a>
-    </div>
-    <div class="col-md-2 text-center">
-        <a href="/public/pages/about.html">About</a>
-    </div>
-    <div class="col-md-2 text-center">
-        <a href="/public/pages/contact.html">Contact</a>
-    </div>
-    <div class="col-md"></div>
 </div>
 <script type="text/javascript">
     for (let index = 0; index < document.getElementsByTagName('a').length; index++) {
@@ -45,4 +52,7 @@
             $('#content').load(element.href);
         });
     }
+    document.getElementById('expandNav').addEventListener('click',function(){
+        $('#navItems').toggle(400);
+    });
 </script>
