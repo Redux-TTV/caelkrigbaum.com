@@ -1,59 +1,41 @@
-<!-- <div class="row hidden">
-    <div class="col-md"></div>
-    <div class="col-md-2">
-        <a href="/pages/main.html">Home</a>
-    </div>
-    <div class="col-md-2">
-        <a href="/pages/blog.html">Blog</a>
-    </div>
-    <div class="col-md-2">
-        <a href="/pages/projects.html">Projects</a>
-    </div>
-    <div class="col-md-2">
-        <a href="/pages/about.html">About</a>
-    </div>
-    <div class="col-md-2">
-        <a href="/pages/contact.html">Contact</a>
-    </div>
-    <div class="col-md"></div>
-</div> -->
-<div class="row">
-    <div class="col-md-1">
-        <button type="button" class="btn btn-outline-primary" id="expandNav">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
-    <div class="col-md-11">
-        <div class="row" id="navItems" style="display: none;">
+<div class="row d-none d-xs-none d-sm-none d-md-block d-lg-block d-xl-block navbar">
+    <div class="col">
+        <div class="row" id="navItems">
             <div class="col-md"></div>
             <div class="col-md-2 text-center">
-                <a href="/public/pages/main.html">Home</a>
+                <a href="javascript:void(0)" class="nav-link" data-href="pages/main.html">Home</a>
             </div>
             <div class="col-md-2 text-center">
-                <a href="/public/pages/blog.html">Blog</a>
+                <a href="javascript:void(0)" class="nav-link" data-href="pages/blog.html">Blog</a>
             </div>
             <div class="col-md-2 text-center">
-                <a href="/public/pages/projects.html">Projects</a>
+                <a href="javascript:void(0)" class="nav-link" data-href="pages/projects.html">Projects</a>
             </div>
             <div class="col-md-2 text-center">
-                <a href="/public/pages/about.html">About</a>
+                <a href="javascript:void(0)" class="nav-link" data-href="pages/about.html">About</a>
             </div>
             <div class="col-md-2 text-center">
-                <a href="/public/pages/contact.html">Contact</a>
+                <a href="javascript:void(0)" class="nav-link" data-href="pages/contact.html">Contact</a>
             </div>
+            <!-- <div class="col-md-2 text-center">
+                <a href="javascript:void(0)" class="nav-link" data-href="pages/tests.html">Tests</a>
+            </div> -->
             <div class="col-md"></div>
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    for (let index = 0; index < document.getElementsByTagName('a').length; index++) {
-        const element = document.getElementsByTagName('a')[index];
-        element.addEventListener('click',function(e){
-            e.preventDefault();
-            $('#mainCardContent').load(element.href);
-        });
-    }
-    document.getElementById('expandNav').addEventListener('click',function(){
-        $('#navItems').toggle(400);
-    });
-</script>
+<div class="row d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none navbar">
+    <div class="col">
+        <button class="btn btn-outline-dark" type="button" id="expandNavlistOverlay"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="navlist-overlay" id="navlistOverlay">
+        <button class="btn btn-outline-light closeOverlayButton" type="button" id="closeNavlistOverlay">&times;</button>
+        <div class="overlay-content">
+            <a href="javascript:void(0)" class="nav-link-overlay" data-href="pages/main.html" onclick="closeNavlistOverlay()">Home</a>
+            <a href="javascript:void(0)" class="nav-link-overlay" data-href="pages/blog.html" onclick="closeNavlistOverlay()">Blog</a>
+            <a href="javascript:void(0)" class="nav-link-overlay" data-href="pages/projects.html" onclick="closeNavlistOverlay()">Projects</a>
+            <a href="javascript:void(0)" class="nav-link-overlay" data-href="pages/about.html" onclick="closeNavlistOverlay()">About</a>
+            <a href="javascript:void(0)" class="nav-link-overlay" data-href="pages/contact.html" onclick="closeNavlistOverlay()">Contact</a>
+        </div>
+    </div>
+</div>

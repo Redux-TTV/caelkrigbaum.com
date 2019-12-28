@@ -6,24 +6,48 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Cael Krigbaum</title>
         <head>
-            <link rel="stylesheet" href="scripts/bootstrap/dist/css/bootstrap.min.css" />
-            <link rel="stylesheet" href="../css/main.css" />
+            <link rel="icon" type="image/png" sizes="32x32" href="content/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="96x96" href="content/icons/favicon-96x96.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="content/icons/favicon-16x16.png">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="css/main.css" />
+            <script src="https://kit.fontawesome.com/d83576f583.js" crossorigin="anonymous"></script>
         </head>
     </head>
     <body>
         <div id="topnav"></div>
-        <div id="status"></div>
+        <div id="status" style="display:none;"></div>
         <div id="main">
-            <div id="content"></div>
+            <div id="content" class="container">
+                <div class="row mt-5">
+                    <div class="col"></div>
+                    <div class="col-10 card-offWhite">
+                        <div id="mainCardContent" class="no-opacity m-5"></div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
         </div>
-        <script src="scripts/jquery/dist/jquery.min.js"></script>
-        <script type="module" src="scripts/popper.js/dist/popper.min.js"></script>
-        <script src="scripts/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+            crossorigin="anonymous">
+        </script>
+        <script 
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+            crossorigin="anonymous">
+        </script>
         <script src="js/utilities.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                $('#topnav').load('components/topnav.html');
-                $('#content').load('pages/main.html');
+                ajaxLoad('components/topnav.html','topnav');
+                ajaxLoad('pages/main.html','mainCardContent');
             });
         </script>
     </body>
