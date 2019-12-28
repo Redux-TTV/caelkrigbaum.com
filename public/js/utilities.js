@@ -13,7 +13,7 @@ function ajaxLoad(path,dest) {
 }
 function checkGetScript(url) {
     if(!url.startsWith('/')){url = '/'+url;};
-    const jsURL = url.replace('public/','public/js/') + url.replace('.php','.js').replace('.html','.js');
+    const jsURL = url.replace('public/','public/js/').replace('.php','.js').replace('.html','.js');
     try {
         $.getScript(jsURL)
     } catch (error) {
