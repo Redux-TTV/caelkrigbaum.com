@@ -10,6 +10,5 @@ app.use('/scripts',express.static(path.join(__dirname,'node_modules')));
 app.use('/content',express.static(path.join(__dirname,'content')));
 app.use('/css',express.static(path.join(__dirname,'public','css')));
 app.use(express.static(__dirname));
-//app.use(express.static(path.join(__dirname,'public')));
 
 app.listen(PORT,() => {console.log(`Server running on port ${PORT}`)});

@@ -6,20 +6,28 @@ h1, p {
     color: black;
 }
 
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+}
+
 body {
     background-color: rgb(242, 242, 242);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 p {
-    font-size: 12px;
+    font-size: 1em;
 }
 
-.card-offWhite {
-    background-color: rgb(242, 242, 242);
+.card {
     border-radius: 20px;
     width: 50vw;
+}
+
+.off-white {
+    background-color: rgb(242, 242, 242);
 }
 
 .centered {
@@ -85,7 +93,6 @@ p {
 
 .overlay-content {
     position: relative;
-    top: 25%; /* 25% from the top */
     width: 100%; /* 100% width */
     text-align: center; /* Centered text/links */
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
