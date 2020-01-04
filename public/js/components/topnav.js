@@ -26,6 +26,7 @@ document.getElementById('closeNavlistOverlay').addEventListener('click',function
 for (let index = 0; index < document.getElementsByClassName('nav-link-overlay').length; index++) {
     const element = document.getElementsByClassName('nav-link-overlay')[index];
     element.addEventListener('click',function(){
+        document.getElementById('expandNavlistOverlay').style.visibility="visible";
         closeNavlistOverlay();
     });
 }
